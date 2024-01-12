@@ -20,6 +20,19 @@
             <h3>Datos del paciente</h3>
             <form class="needs-validation p-2" novalidate>
               <div class="mb-3">
+                
+                <div class="mb-3">
+                  <label for="name_person">Nombre del propietario</label>
+                  <input 
+                  class="form-control" 
+                  type="text" 
+                  id="name_person" 
+                  placeholder="Escribe tu nombre" 
+                  required>
+                  <div class="invalid-feedback">
+                    Este campo es requerido
+                  </div>
+                </div>
                 <label for="name_pet">nombre de la mascota</label>
                 <input 
                 class="form-control" 
@@ -31,20 +44,7 @@
                   Este campo es requerido
                 </div>
               </div>
-
-              <div class="mb-3">
-                <label for="name_person">Nombre del propietario</label>
-                <input 
-                class="form-control" 
-                type="text" 
-                id="name_person" 
-                placeholder="Escribe tu nombre" 
-                required>
-                  <div class="invalid-feedback">
-                  Este campo es requerido
-                </div>
-              </div>
-
+                
               <div class="mb-3">
                 <label for="telefono_propietario">Telefono del propietario</label>
                 <input 
@@ -84,7 +84,7 @@
               </div>
 
               <div class="mb-3">
-                <label for="description">Fecha de la cita</label>
+                <label for="description">Sintomas</label>
                 <textarea id="description" 
                 class="form-control" 
                 cols="30" 
@@ -94,7 +94,7 @@
                   Este campo es requerido
                 </div>
               </div>
-              <button type="submit" class="btn btn-success w-100">submit</button>
+              <button type="submit" class="btn btn-success w-100" id="btn_submit">submit</button>
             </form>
           </div>
         </div>
@@ -103,6 +103,56 @@
         <div class="col-sm-12 col-md-6">
           <div class="p-2">
             <h3>Administrar citas</h3>
+            <div>
+              <ul class="list-group" id="cite_panel">
+                <li class="list-group-item">
+                  Nombre del propietario
+                  <li class="list-group-item">
+                    <span id="name_owner_cite" >
+                        Informacion
+                    </span>
+                  </li>
+                </li>
+                <li class="list-group-item">nombre de la mascota
+                  <li class="list-group-item">
+                      <span id="name_pet_cite">
+                        Informacion
+                      </span>
+                  </li>
+                </li>
+                <li class="list-group-item">Telefono del propietario
+                  <li class="list-group-item">
+                    <span id="num_pet_cite">
+                        Informacion
+                    </span>
+                  </li>
+                </li>
+                <li class="list-group-item">Fecha de la cita
+                  <li class="list-group-item">
+                    <div class="fecha_hora_cita">
+                      <span id="cite_date">
+                          Informacion
+                      </span>
+                      <span id="time_date">
+                          adasd
+                        </span>
+                    </div
+                  </li>
+                </li>
+                <li class="list-group-item">Sintomas de la mascota
+                  <li class="list-group-item">
+                    <span id="symptoms">
+                        Informacion
+                    </span>
+                  </li>
+                </li>
+              </ul>
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example" id="btns_cite">
+                <button type="button" class="btn btn-danger" id="btn_eliminar">Eliminar</button>
+
+                <button type="button" class="btn btn-success" id="btn_editar">Editar</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

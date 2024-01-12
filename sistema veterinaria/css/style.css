@@ -23,3 +23,17 @@ body{
   color: #fafafa;
   text-shadow: 2px 2px 1px #000;
 }
+
+#btns_cite{
+  display: flex;
+}
+
+.fecha_hora_cita{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#cite_panel span{
+  opacity: 0;
+}
